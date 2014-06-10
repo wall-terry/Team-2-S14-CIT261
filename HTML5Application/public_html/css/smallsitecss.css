@@ -1,0 +1,9 @@
+@media only screen and (max-device-width: 480px) {
+	html {
+    background-color: #253d65;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-attachment: fixed;
+    color: #bac7dd;
+        }
+}
