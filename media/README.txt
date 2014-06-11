@@ -1,0 +1,1 @@
+This folder is for all of the audio and video files to be used on the site.
