@@ -37,4 +37,4 @@ switch ($action) {
         
 }
 
-include('/views/mainViews.php');
+include('/views/pageviews.php');
