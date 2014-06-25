@@ -14,9 +14,9 @@ Development underway by TM Thoughtworks
      </header> 
  <main>
      <h1>
-         Welcome
+         Welcome to Teez the Moment -- Coming Soon
      </h1>
-     <p>Site under construction.</p>
+     <p>Capture the Moment straight from your camera to tee shirts and more.</p>
      <footer>
         <?php include $_SERVER['DOCUMENT_ROOT'].'/modules/footer.php';  ?>
      </footer>
