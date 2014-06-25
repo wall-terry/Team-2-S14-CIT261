@@ -4,7 +4,7 @@ Development underway by TM Thoughtworks
 -->
 <html>
     <head>
-        <title>Teez the Moment</title>
+        <title>Teez the Moment image select page</title>
         <?php include $_SERVER['DOCUMENT_ROOT'] . '/modules/head.php'; ?>
     </head>
 
@@ -14,21 +14,16 @@ Development underway by TM Thoughtworks
         </header> 
     <main>
         <h1>
-            Welcome to Teez the Moment -- Coming Soon
+            Get Image to Upload
         </h1>
-        <p>Capture the Moment straight from your camera to tee shirts and more.</p>
+        <p>Choose your photo to upload or upload an image straight from your camera.</p>
         <form action="." method="post">
-            <input type="hidden" name="action" value="login">
-
-            <label>Username:</label>
-                <input type="text" name="username">
-            
-            <label>Password:</label>
-                <input type="password" name="password">
-           
+            <input type="hidden" name="action" value="getImage">
+            <label>Select Image File:</label>
+            <input type="file" name="imageFile">
             <button type="submit">Login</button>
         </form>
-        <a href=".?action=createAccount">Create New Account</a>
+        <button type="button" onclick=".?">Capture Image From Camera</button>>
     </main>
 
     <footer>
@@ -37,4 +32,3 @@ Development underway by TM Thoughtworks
 
 </body>
 </html>
-

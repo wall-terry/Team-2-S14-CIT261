@@ -10,12 +10,15 @@ switch ($action) {
         break;
     
     case 'login':
+        include('views/authenticatedUserView.php');
         break;
 
     case 'createAccount':
+        include('views/createAccountView.php');
         break;
     
-    case 'browseImages':
+    case 'getImages':
+        include('views/previewImageView');
         break;
     
     case 'captureImage':

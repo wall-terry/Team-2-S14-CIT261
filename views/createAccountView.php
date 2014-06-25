@@ -4,7 +4,7 @@ Development underway by TM Thoughtworks
 -->
 <html>
     <head>
-        <title>Teez the Moment</title>
+        <title>Teez the Moment create user account view</title>
         <?php include $_SERVER['DOCUMENT_ROOT'] . '/modules/head.php'; ?>
     </head>
 
@@ -14,18 +14,22 @@ Development underway by TM Thoughtworks
         </header> 
     <main>
         <h1>
-            Welcome to Teez the Moment -- Coming Soon
+            Create a New user Account
         </h1>
-        <p>Capture the Moment straight from your camera to tee shirts and more.</p>
+        <p>Please select a username, a valid email address, and a password.</p>
         <form action="." method="post">
-            <input type="hidden" name="action" value="login">
+            <input type="hidden" name="action" value="createAccount">
 
             <label>Username:</label>
-                <input type="text" name="username">
-            
+            <input type="text" name="username">
+
+            <label>Email:</label>
+            <input type="text" name="username">
             <label>Password:</label>
-                <input type="password" name="password">
-           
+            <input type="password" name="password">
+            <label>Confirm Password:</label>
+            <input type="password" name="password">
+
             <button type="submit">Login</button>
         </form>
         <a href=".?action=createAccount">Create New Account</a>
@@ -37,4 +41,3 @@ Development underway by TM Thoughtworks
 
 </body>
 </html>
-
