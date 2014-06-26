@@ -1,43 +1,48 @@
 
 <?php
+
 if (isset($_POST['action'])) {
     $action = $_POST['action'];
 } else {
-    $action = 'home';
-}
-switch ($action) {
-    case 'home':
-        break;
-    
-    case 'login':
-        include('views/authenticatedUserView.php');
-        break;
+    if (isset($_GET['action'])) {
+        $action = $_GET['action'];
+    } else {
+        $action = 'home';
+    }
 
-    case 'createAccount':
-        include('views/createAccountView.php');
-        break;
-    
-    case 'getImages':
-        include('views/previewImageView');
-        break;
-    
-    case 'captureImage':
-        break;
-    
-    case 'createOrder':
-        break;
-    
-    case 'paymentProcessing':
-        break;
-    
-    case 'sendOrder':
-        break;
-    
-    case 'confirmOrder':
-        break;
-    
-    default;
-        
-}
+    switch ($action) {
+        case 'home':
+            include('views/pageviews.php');
+            break;
 
-include('views/pageviews.php');
+        case 'login':
+            include('views/authenticatedUserView.php');
+            break;
+
+        case 'createAccount':
+            include('views/createAccountView.php');
+            break;
+
+        case 'getImages':
+            include('views/previewImageView');
+            break;
+
+        case 'captureImage':
+            break;
+
+        case 'createOrder':
+            break;
+
+        case 'paymentProcessing':
+            break;
+
+        case 'sendOrder':
+            break;
+
+        case 'confirmOrder':
+            break;
+
+        default;
+    }
+
+    
