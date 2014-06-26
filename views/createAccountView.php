@@ -18,7 +18,7 @@ Development underway by TM Thoughtworks
         </h1>
         <p>Please select a username, a valid email address, and a password.</p>
         <form action="." method="post">
-            <input type="hidden" name="action" value="createAccount">
+            <input type="hidden" name="action" value="newAccount">
 
             <label>Username:</label>
             <input type="text" name="username">

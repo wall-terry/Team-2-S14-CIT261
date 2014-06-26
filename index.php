@@ -9,6 +9,7 @@ if (isset($_POST['action'])) {
     } else {
         $action = 'home';
     }
+}
 
     switch ($action) {
         case 'home':
@@ -16,7 +17,7 @@ if (isset($_POST['action'])) {
             break;
 
         case 'login':
-            include('views/authenticatedUserView.php');
+            include('views/authenicatedUserView.php');
             break;
 
         case 'createAccount':
@@ -44,5 +45,4 @@ if (isset($_POST['action'])) {
 
         default;
     }
-
     

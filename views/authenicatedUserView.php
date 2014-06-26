@@ -21,9 +21,9 @@ Development underway by TM Thoughtworks
             <input type="hidden" name="action" value="getImage">
             <label>Select Image File:</label>
             <input type="file" name="imageFile">
-            <button type="submit">Login</button>
+            
         </form>
-        <button type="button" onclick=".?">Capture Image From Camera</button>>
+        <button type="button" onclick=".?">Capture Image From Camera</button>
     </main>
 
     <footer>
