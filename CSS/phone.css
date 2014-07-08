@@ -5,15 +5,36 @@ and open the template in the editor.
 */
 /* 
     Created on : Jun 11, 2014, 1:09:40 PM
-    Author     : Terry Wall
+    Author     : Timothy Mecham
 */
 
 @media only screen and (max-device-width: 480px) {
-	html {
-    background-color: #253d65;
-    background-repeat: no-repeat;
-    background-position: bottom center;
-    background-attachment: fixed;
-    color: #bac7dd;
+    html {
+        background-color: #ffffff;
+        background-repeat: no-repeat;
+        background-image: url("/images/teez_logo.jpg");
+        background-attachment: fixed;
+        color: #086895;
         }
+    p {
+        color: black;
+        }
+    body {
+        width: 85%;
+        margin: auto;
+        height: 100%;
+        margin-bottom: 0px;
+        }
+    nav {    
+        color: black;
+        background-color: #086895;
+        margin: 0;
+        padding: 0;
+        border-radius: 5px;
+        text-align: center;
+        }
+    a {
+        color: rgb(177, 174, 92);
+	font-size: large;
+    }
 }

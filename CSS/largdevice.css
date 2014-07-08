@@ -1,0 +1,83 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jun 30, 2014, 4:28:33 PM
+    Author     : Timothy
+    This is not ready yet... it still needs some tweekingl.
+*/
+
+html {
+    background-color: #ffffff;
+    background-image: url("/images/teez_logo.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #086895;
+}
+body {
+    margin: auto;
+    width: 55%;
+}
+h1 {
+    color: #bac7dd;
+    font-size: 36px;
+    font-family: "Times New Roman",Times,serif;
+}
+h2 {
+    color: #826536;
+    font-size: 24px;
+    font-family: "Times New Roman",Times,serif,italic;
+    font-style: italic;
+}
+h3 {
+    color: #826536;
+    font-size: 16px;
+    font-family: Helvetica,Arial,Sans-Serif,bold;
+    font-weight: bold;
+}
+h4 {
+    color: #826536;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 15px;
+}
+h5 {
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    color: #bac7dd;
+}
+ul {
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 13px;
+    color: #086895;
+}
+ol {
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 13px;
+    color: #086895;
+}
+li {
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 13px;
+    color: #086895;
+}
+p {
+    font-family: Arial,Helvetica,sans-serif;
+    color: black;
+    font-size: 13px;
+}
+nav {    
+    background-color: #086895;
+    margin: 0;
+    padding: 0;
+    border-radius: 5px;
+    color: black;
+    }
+a {
+    color: rgb(177, 174, 92);
+	font-size: large;
+    }
