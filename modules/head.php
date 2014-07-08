@@ -1,8 +1,3 @@
-/* 
-* To change this license header, choose License Headers in Project Properties.
-* To change this template file, choose Tools | Templates
-* and open the template in the editor.
-*/
 <meta charset="UTF-8">
 <meta content="width=device-width" name="viewport">
 <link href="/css/phone.css" type="text/css" rel="stylesheet" media="screen">
