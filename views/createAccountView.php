@@ -10,7 +10,7 @@ Development underway by TM Thoughtworks
 
     <body>
        
-            <?php include  '../modules/header.php'; ?>  
+    <?php include ('../modules/header.php'); ?>
         
     <main>
         <h1>
@@ -37,6 +37,5 @@ Development underway by TM Thoughtworks
     
         <?php include  '../modules/footer.php'; ?>
     
-
 </body>
 </html>
