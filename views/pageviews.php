@@ -17,6 +17,7 @@ Development underway by TM Thoughtworks
             Welcome to Teez the Moment -- Coming Soon
         </h1>
         <p>Capture the Moment straight from your camera to tee shirts and more.</p>
+        <p>What the heck is happening</p>
         <form action="../users/login.php" method="post">
             
             <input type="hidden" name="action" value="login">
