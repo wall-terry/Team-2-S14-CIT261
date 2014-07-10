@@ -10,7 +10,7 @@ Development underway by TM Thoughtworks
 
     <body>
        
-            <?php include $_SERVER['DOCUMENT_ROOT'] . '/modules/header.php'; ?>  
+            <?php include  '../modules/header.php'; ?>  
         
     <main>
         <h1>

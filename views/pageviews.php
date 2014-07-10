@@ -10,7 +10,7 @@ Development underway by TM Thoughtworks
 
     <body>
        
-            <?php include '../modules/header.php'; ?>  
+     <?php include '../modules/header.php'; ?>  
         
     <main>
         <h1>
@@ -18,6 +18,7 @@ Development underway by TM Thoughtworks
         </h1>
         <p>Capture the Moment straight from your camera to tee shirts and more.</p>
         <form action="../users/login.php" method="post">
+            
             <input type="hidden" name="action" value="login">
 
             <label>Username:</label>
@@ -32,7 +33,7 @@ Development underway by TM Thoughtworks
     </main>
 
 
-        <?php include  '../modules/footer.php'; ?>
+    <?php include  '../modules/footer.php'; ?>
    
 
 </body>
