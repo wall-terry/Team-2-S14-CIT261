@@ -5,13 +5,13 @@ Development underway by TM Thoughtworks
 <html>
     <head>
         <title>Teez the Moment image select page</title>
-        <?php include $_SERVER['DOCUMENT_ROOT'] . '/modules/head.php'; ?>
+        <?php include ( filter_input(INPUT_SERVER, 'DOCUMENT_ROOT') . '/modules/head.php'); ?>
     </head>
 
     <body>
-        
-            <?php include  '../modules/header.php'; ?>  
-         
+
+        <?php include ( filter_input(INPUT_SERVER, 'DOCUMENT_ROOT') . '/modules/header.php'); ?>
+
     <main>
         <h1>
             Get Image to Upload
@@ -21,14 +21,14 @@ Development underway by TM Thoughtworks
             <input type="hidden" name="action" value="getImage">
             <label>Select Image File:</label>
             <input type="file" name="imageFile">
-            
+
         </form>
         <button type="button" onclick=".?">Capture Image From Camera</button>
     </main>
 
-   
-        <?php include  '../modules/footer.php'; ?>
-    
+
+    <?php include ( filter_input(INPUT_SERVER, 'DOCUMENT_ROOT') . '/modules/footer.php'); ?>
+
 
 </body>
 </html>

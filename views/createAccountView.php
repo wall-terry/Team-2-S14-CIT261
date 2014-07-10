@@ -5,18 +5,20 @@ Development underway by TM Thoughtworks
 <html>
     <head>
         <title>Teez the Moment create user account view</title>
-        <?php include '../modules/head.php'; ?>
+        <?php include ( filter_input(INPUT_SERVER, 'DOCUMENT_ROOT') . '/modules/head.php'); ?>
     </head>
 
     <body>
-       
-    <?php include ('../modules/header.php'); ?>
-        
+
+        <?php include ( filter_input(INPUT_SERVER, 'DOCUMENT_ROOT') . '/modules/header.php'); ?>
+
     <main>
         <h1>
             Create a New user Account
         </h1>
         <p>Please select a username, a valid email address, and a password.</p>
+
+
         <form action="../users/createUserAccount.php" method="post">
             <input type="hidden" name="action" value="newAccount">
 
@@ -34,8 +36,8 @@ Development underway by TM Thoughtworks
         </form>
     </main>
 
-    
-        <?php include  '../modules/footer.php'; ?>
-    
+
+    <?php include ( filter_input(INPUT_SERVER, 'DOCUMENT_ROOT') . '/modules/footer.php'); ?>
+
 </body>
 </html>

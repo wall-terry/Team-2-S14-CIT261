@@ -3,14 +3,11 @@
 
 /* start a new session or resume the previous session
  * 
- */
-$lifetime = 60 * 60 * 24 * 14;
-session_set_cookie_params($lifetime, '/');
-session_start();
+ 
 
-if (!isset($_SESSION['userID'])) {
-    include 'views/pageviews.php';
-} else {
-    include 'views/authenticatedUserView.php';
-}
+require_once filter_input(INPUT_SERVER, 'DOCUMENT_ROOT').'/utilites/main.php';
+
+global $doc_root;*/
+include ('/views/pageviews.php');
+
 
