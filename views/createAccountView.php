@@ -17,22 +17,21 @@ Development underway by TM Thoughtworks
             Create a New user Account
         </h1>
         <p>Please select a username, a valid email address, and a password.</p>
-        <form action="." method="post">
+        <form action="/index.php" method="post">
             <input type="hidden" name="action" value="newAccount">
 
             <label>Username:</label>
             <input type="text" name="username">
 
             <label>Email:</label>
-            <input type="text" name="username">
+            <input type="text" name="email">
             <label>Password:</label>
             <input type="password" name="password">
             <label>Confirm Password:</label>
-            <input type="password" name="password">
+            <input type="password" name="verify_password">
 
-            <button type="submit">Login</button>
+            <button type="submit">Create Account</button>
         </form>
-        <a href=".?action=createAccount">Create New Account</a>
     </main>
 
     <footer>

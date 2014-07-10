@@ -1,34 +1,60 @@
 <?php
 
-/* 
+/*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
 
-class Database {
-    private $dsn = 'mysql:host=teezthemoment.com;dbname=teamteez';
-    private $username = 'teamteez';
-    private $password = 'CIT261s14t#2';
+$dsn = 'mysql:host=localhost;dbname=teamteez';
+$username = 'teamteez';
+$password = 'CIT261s14t#2';
+$options = array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION);
+try {
+    $db = new PDO($dsn, $username, $password, $options);
+} catch (PDOException $ex) {
+    $message = 'Failed to Connect to Database';
+    display_db_error($message);
+    exit;
+}
+
+function get_name_by_userID($userID) {
+    global $db;
+    $query = 'SELECT  first_name, lastname FROM users
+            WHERE userID = $userID';
+    try {
+        $statement = $db->prepare($query);
+        $statement->execute();
+        $result = $statement->fetch();
+        $statement->closeCursor();
+        return $result;
+    } catch (Exception $ex) {
+        $message = 'Failed to Get Name for userID';
+        display_db_error($message);
+    }
+}
+function create_user_account($username, $email, $password){
+    global $db;
+    $query = 'INSERT INTO users
+               (username, email, password) 
+              VALUES
+                (:username, :email, :password)';
+    try {
+    $statement = $db->prepare($query);
+    $statement->bindValue(':username', $username);
+    $statement->bindValue(':email', $email);
+    $statement->bindValue(':password', $password);
+    $statement->execute();
+    $statement->closeCursor();
+    $user_ID = $db->lastInsertId();
+    return $user_ID;
+    } catch (PDOException $ex){
+       $message = 'Failed to Create New User';
+       display_db_error($message); 
+    }
     
 }
-
-function get_name_by_userID($userID){  
-    $query = 'SELECT  first_name, lastname FROM users
-            WHERE userID = $userID';           
-}
-
-function build_database(){
-  $query = 'CREATE TABLE [IF NOT EXISTS] users 
-          { userID      INT     NOT NULL    UNIQUE,
-            username    VARCHAR(60) NOT NULL,
-            email       VARCHAR(255) NOT NULL,
-            password    VARCHAR(60) NOT NULL,
-            verified    BOOLEAN(60) NOT NULL,
-            role        VARCHAR(15) NOT NULL,
-            address     INT(11),
-            first_name  VARCHAR(60),
-            last_name   VARCHAR(60),
-            
-            }';
+function display_db_error($message){
+    
+    include  ('/errors/error.php');
 }

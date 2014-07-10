@@ -28,7 +28,7 @@ Development underway by TM Thoughtworks
            
             <button type="submit">Login</button>
         </form>
-        <a href=".?action=createAccount">Create New Account</a>
+        <a href="/index.php?action=createAccount">Create New Account</a>
     </main>
 
     <footer>

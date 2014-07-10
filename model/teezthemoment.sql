@@ -7,7 +7,7 @@ CREATE TABLE users
             username    VARCHAR(60)     NOT NULL,
             email       VARCHAR(255)    NOT NULL,
             password    VARCHAR(60)     NOT NULL,
-            verified    BOOLEAN(60)     DEFAULT FALSE,
+            verified    BOOLEAN         DEFAULT FALSE,
             user_role   VARCHAR(15)     DEFAULT 'user',
             address     INT(11)         DEFAULT NULL,
             first_name  VARCHAR(60)     DEFAULT NULL,
@@ -23,13 +23,13 @@ CREATE TABLE addresses
             city        VARCHAR(60)     NOT NULL,
             us_state    VARCHAR(60)     NOT NULL,
             zip         VARCHAR(12)     NOT NULL,
-            PRIMARY KEY (addressID),
+            PRIMARY KEY (addressID)
            );
  
 CREATE TABLE orders
           ( orderID         INT             NOT NULL    AUTO_INCREMENT,
             order_date      DATETIME        NOT NULL,
-            useID           INT             NOT NULL,
+            userID           INT             NOT NULL,
             PRIMARY KEY (orderID),
             INDEX userID (userID)
            );
@@ -51,33 +51,33 @@ CREATE TABLE images
           ( imageID     INT             NOT NULL    AUTO_INCREMENT,
             userID      INT             NOT NULL,
             filename    VARCHAR(60)     NOT NULL,
-            PRIMARY KEY (imageID)
-            INDEX userID (userID),
+            PRIMARY KEY (imageID),
+            INDEX userID (userID)
            );
 
 CREATE TABLE products
           ( productID       INT             NOT NULL    AUTO_INCREMENT,
             description     VARCHAR(60)     NOT NULL,
             price           DECIMAL(10,2)   NOT NULL,
-            PRIMARY KEY (productID),
+            PRIMARY KEY (productID)
            );
 
  CREATE TABLE colors
           ( colorID         INT             NOT NULL    AUTO_INCREMENT,
             colorname       VARCHAR(60)     NOT NULL,
-            PRIMARY KEY (colorID),
+            PRIMARY KEY (colorID)
            );
 
 CREATE TABLE sizes
           ( sizeID              INT             NOT NULL    AUTO_INCREMENT,
             size_description    VARCHAR(60)     NOT NULL,
-            PRIMARY KEY (sizeID),
+            PRIMARY KEY (sizeID)
            );
 
 CREATE TABLE style_options
           ( styleID         INT             NOT NULL    AUTO_INCREMENT,
             description     VARCHAR(60)     NOT NULL,
-            PRIMARY KEY (styleID),
+            PRIMARY KEY (styleID)
            );
 
 CREATE TABLE color_selections
