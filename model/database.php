@@ -33,6 +33,7 @@ function get_name_by_userID($userID) {
         display_db_error($message);
     }
 }
+
 function create_user_account($username, $email, $password){
     global $db;
     $query = 'INSERT INTO users
@@ -52,9 +53,25 @@ function create_user_account($username, $email, $password){
        $message = 'Failed to Create New User';
        display_db_error($message); 
     }
-    
+  }
+function check_user_login($userName, $passWord) {
+  $query = 'SELECT userID
+            WHERE username = :username AND password = :password'; 
+  try{
+  $statement = $db->prepare($query);
+  $statement->bindValue(':username', $userName);
+  $statement->bindValue(':password', $passWord);
+  $statement->execute();
+  $userID = $statement->fetch();
+  return $userID;
+}catch (PDOException $ex){
+    $message ='Login Database Error';
+    display_db_error($message);
 }
+}
+
 function display_db_error($message){
     
-    include  ('/errors/error.php');
+    include  ('errors/error.php');
+    exit();
 }

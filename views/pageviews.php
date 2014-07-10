@@ -5,19 +5,19 @@ Development underway by TM Thoughtworks
 <html>
     <head>
         <title>Teez the Moment</title>
-        <?php include $_SERVER['DOCUMENT_ROOT'] . '/modules/head.php'; ?>
+        <?php include '../modules/head.php'; ?>
     </head>
 
     <body>
         <header>
-            <?php include $_SERVER['DOCUMENT_ROOT'] . '/modules/header.php'; ?>  
+            <?php include '../modules/header.php'; ?>  
         </header> 
     <main>
         <h1>
             Welcome to Teez the Moment -- Coming Soon
         </h1>
         <p>Capture the Moment straight from your camera to tee shirts and more.</p>
-        <form action="." method="post">
+        <form action="../users/login.php" method="post">
             <input type="hidden" name="action" value="login">
 
             <label>Username:</label>
@@ -28,11 +28,11 @@ Development underway by TM Thoughtworks
            
             <button type="submit">Login</button>
         </form>
-        <a href="/index.php?action=createAccount">Create New Account</a>
+        <a href="../views/createAccountView.php">Create New Account</a>
     </main>
 
     <footer>
-        <?php include $_SERVER['DOCUMENT_ROOT'] . '/modules/footer.php'; ?>
+        <?php include  '../modules/footer.php'; ?>
     </footer>
 
 </body>

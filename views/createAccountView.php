@@ -17,7 +17,7 @@ Development underway by TM Thoughtworks
             Create a New user Account
         </h1>
         <p>Please select a username, a valid email address, and a password.</p>
-        <form action="/index.php" method="post">
+        <form action="../users/createUserAccount.php" method="post">
             <input type="hidden" name="action" value="newAccount">
 
             <label>Username:</label>
