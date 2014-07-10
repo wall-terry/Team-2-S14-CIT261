@@ -9,9 +9,9 @@ Development underway by TM Thoughtworks
     </head>
 
     <body>
-        <header>
+       
             <?php include '../modules/header.php'; ?>  
-        </header> 
+        
     <main>
         <h1>
             Welcome to Teez the Moment -- Coming Soon
@@ -31,9 +31,9 @@ Development underway by TM Thoughtworks
         <a href="../views/createAccountView.php">Create New Account</a>
     </main>
 
-    <footer>
+
         <?php include  '../modules/footer.php'; ?>
-    </footer>
+   
 
 </body>
 </html>

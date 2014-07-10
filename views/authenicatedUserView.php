@@ -9,9 +9,9 @@ Development underway by TM Thoughtworks
     </head>
 
     <body>
-        <header>
-            <?php include $_SERVER['DOCUMENT_ROOT'] . '/modules/header.php'; ?>  
-        </header> 
+        
+            <?php include  '../modules/header.php'; ?>  
+         
     <main>
         <h1>
             Get Image to Upload
@@ -26,9 +26,9 @@ Development underway by TM Thoughtworks
         <button type="button" onclick=".?">Capture Image From Camera</button>
     </main>
 
-    <footer>
-        <?php include $_SERVER['DOCUMENT_ROOT'] . '/modules/footer.php'; ?>
-    </footer>
+   
+        <?php include  '../modules/footer.php'; ?>
+    
 
 </body>
 </html>
