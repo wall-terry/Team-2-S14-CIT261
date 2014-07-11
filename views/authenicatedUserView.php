@@ -4,7 +4,7 @@ Development underway by TM Thoughtworks
 -->
 <html>
     <head>
-  <?php include (filter_input(INPUT_SERVER,'DOCUMENT_ROOT').'/modules/head.php');?>
+
     </head>
 
     <body>
