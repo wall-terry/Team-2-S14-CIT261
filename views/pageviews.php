@@ -29,13 +29,12 @@ Development underway by TM Thoughtworks
 
             <button type="submit">Login</button>
         </form>
-        <a href="views/createAccountView.php">Create New Account</a>
+        <a href="/users/enter_user_account.php">Create New Account</a>
     </main>
 
 
-    <?php include ( filter_input(INPUT_SERVER, 'DOCUMENT_ROOT') . '/modules/footer.php'); ?>
+    <?php include ('../modules/footer.php'); ?>
 
 
 </body>
 </html>
-

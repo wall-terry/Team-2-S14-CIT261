@@ -5,7 +5,7 @@ Development underway by TM Thoughtworks
 <html>
     <head>
         <title>Teez the Moment create user account view</title>
-        <?php include ( filter_input(INPUT_SERVER, 'DOCUMENT_ROOT') . '/modules/head.php'); ?>
+        <?php include ( filter_input(INPUT_SERVER, 'DOCUMENT_ROOT') . '/modules/head .php'); ?>
     </head>
 
     <body>
