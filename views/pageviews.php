@@ -5,12 +5,12 @@ Development underway by TM Thoughtworks
 <html>
     <head>
         <title>Teez the Moment</title>
-        <?php include ( filter_input(INPUT_SERVER, 'DOCUMENT_ROOT') . '/modules/head.php'); ?>
+        <?php include (filter_input(INPUT_SERVER,'DOCUMENT_ROOT').'/modules/head.php'); ?>
     </head>
 
     <body>
 
-        <?php include ( filter_input(INPUT_SERVER, 'DOCUMENT_ROOT') . '/modules/header.php'); ?>  
+        <?php include (filter_input(INPUT_SERVER,'DOCUMENT_ROOT').'/modules/header.php'); ?>  
 
     <main>
         <h1>
@@ -33,7 +33,7 @@ Development underway by TM Thoughtworks
     </main>
 
 
-    <?php include ('../modules/footer.php'); ?>
+    <?php include (filter_input(INPUT_SERVER,'DOCUMENT_ROOT').'/modules/footer.php'); ?>
 
 
 </body>

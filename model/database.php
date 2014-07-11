@@ -5,7 +5,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-echo 'database.php';
+
 $dsn = 'mysql:host=localhost;dbname=teamteez';
 $username = 'teamteez';
 $password = 'CIT261s14t#2';
@@ -18,11 +18,12 @@ try {
     display_db_error($message);
     exit;
 }
-echo 'PDO object succesfully created.';
 
-function get_name_by_userID($userID) {
+
+function get_user_from_userID($userID) {
     global $db;
-    $query = 'SELECT  first_name, lastname FROM users
+    
+    $query = 'SELECT  * FROM users
             WHERE userID = :userID';
     try {
         $statement = $db->prepare($query);
@@ -32,7 +33,7 @@ function get_name_by_userID($userID) {
         $statement->closeCursor();
         return $result;
     } catch (Exception $ex) {
-        $message = 'Failed to Get Name for userID';
+        $message = 'Failed to Get user dat from userID';
         display_db_error($message);
     }
 }
@@ -59,20 +60,23 @@ function create_user_account($username, $email, $password) {
 }
 
 function check_user_login($userName, $passWord) {
-    $query = 'SELECT userID, first_name, last_name
+    $query = 'SELECT * FROM users
             WHERE username = :username AND password = :password';
     try {
         $statement = $db->prepare($query);
         $statement->bindValue(':username', $userName);
         $statement->bindValue(':password', $passWord);
         $statement->execute();
-        $user_data = $statement->fetch();
-        return $user_data;
+        $result = $statement->fetch();
+        $statement->closeCursor();
+        $_SESSION['userID'] = $result['userID'];
+        return $result;
     } catch (PDOException $ex) {
         $message = 'Login Database Error';
         display_db_error($message);
     }
 }
+
 
 function display_db_error($message) {
 

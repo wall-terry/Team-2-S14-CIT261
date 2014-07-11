@@ -7,4 +7,5 @@
  */
 require_once '../utilities/main.php';
 
+
 include '../views/createAccountView.php';

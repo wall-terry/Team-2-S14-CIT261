@@ -5,11 +5,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-echo 'main.php';
 
-$doc_root = filter_input(INPUT_SERVER,'DOCUMENT_ROOT');
 
-require_once $doc_root.'/model/database.php';
+// Get the document root
+$doc_root = filter_input(INPUT_SERVER, 'DOCUMENT_ROOT');
+
+
+
+// Get common code
+require_once('model/database.php');
+
 
 $lifetime = 60 * 60 * 24 * 14;
 session_set_cookie_params($lifetime, '/');
