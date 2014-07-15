@@ -5,6 +5,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+require_once '../model/database.php';
 require_once '../utilities/main.php';
 
 $user_name = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_STRING);
@@ -13,10 +14,15 @@ $user_password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING);
 $verify_password = filter_input(INPUT_POST, 'verify_password', FILTER_SANITIZE_STRING);
 
 if ($user_password == $verify_password) {
+
     $userID = create_user_account($user_name, $user_email, $user_password);
-    include '../views/authenicatedUserView.php';
     $_SESSION['userID'] = $userID;
-    echo 'New user created with userID'.$_SESSION['userID'];
+    $_SESSION['username'] = $user_name;
+   
+
+    include '../views/authenicatedUserView.php';
+    
+
             
 } else {
     include '../views/createAccountView.php';

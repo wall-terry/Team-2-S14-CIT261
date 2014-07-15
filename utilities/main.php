@@ -10,12 +10,6 @@
 // Get the document root
 $doc_root = filter_input(INPUT_SERVER, 'DOCUMENT_ROOT');
 
-
-
-// Get common code
-require_once('model/database.php');
-
-
 $lifetime = 60 * 60 * 24 * 14;
 session_set_cookie_params($lifetime, '/');
 session_start();

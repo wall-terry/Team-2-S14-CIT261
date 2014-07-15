@@ -4,7 +4,7 @@ Development underway by TM Thoughtworks
 -->
 <html>
     <head>
-        <title>Teez the Moment</title>
+        <title>Teez the Moment Login page</title>
         <?php include (filter_input(INPUT_SERVER,'DOCUMENT_ROOT').'/modules/head.php'); ?>
     </head>
 

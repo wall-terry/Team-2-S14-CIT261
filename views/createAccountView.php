@@ -5,7 +5,7 @@ Development underway by TM Thoughtworks
 <html>
     <head>
         <title>Teez the Moment create user account view</title>
-        <?php include ( filter_input(INPUT_SERVER, 'DOCUMENT_ROOT') . '/modules/head .php'); ?>
+        <?php include ( filter_input(INPUT_SERVER, 'DOCUMENT_ROOT') . '/modules/head.php'); ?>
     </head>
 
     <body>
@@ -19,18 +19,18 @@ Development underway by TM Thoughtworks
         <p>Please select a username, a valid email address, and a password.</p>
 
 
-        <form action="../users/createUserAccount.php" method="post">
+        <form action="../users/createUserAccount.php" method="post" onsubmit="return checkForm(this);">
             <input type="hidden" name="action" value="newAccount">
 
             <label>Username:</label>
-            <input type="text" name="username">
+            <input type="text" name="username" required pattern="\w+">
 
             <label>Email:</label>
-            <input type="text" name="email">
+            <input type="text" name="email" required >
             <label>Password:</label>
-            <input type="password" name="password">
+            <input type="password" name="password" required="">
             <label>Confirm Password:</label>
-            <input type="password" name="verify_password">
+            <input type="password" name="verify_password" required="">
 
             <button type="submit">Create Account</button>
         </form>

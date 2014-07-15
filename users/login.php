@@ -5,19 +5,19 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+require_once '../model/database.php';
 require_once '../utilities/main.php';
-
 
 $user_name = filter_input(INPUT_POST,'username',FILTER_SANITIZE_STRING);
 $user_password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING);
-
 $user_data = check_user_login($user_name, $user_password); 
+
 if (isset($user_data)){
     $_SESSION['userID'] = $user_data['userID'];
     $_SESSION['username'] = $user_data['username'];
-    $_SESSION['first_name'] = $user_data['first_name'];
-    $_SESSION['last_name'] = $user_data['last_name'];
-    include 'views/authenticatedUserView.php';
+    
+    
+    include '../views/authenicatedUserView.php';
 
 } else {
     echo 'Username or password not correct';

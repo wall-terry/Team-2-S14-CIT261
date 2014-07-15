@@ -10,7 +10,6 @@ $dsn = 'mysql:host=localhost;dbname=teamteez';
 $username = 'teamteez';
 $password = 'CIT261s14t#2';
 $options = array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION);
-
 try {
     $db = new PDO($dsn, $username, $password, $options);
 } catch (PDOException $ex) {
@@ -40,6 +39,7 @@ function get_user_from_userID($userID) {
 
 function create_user_account($username, $email, $password) {
     global $db;
+
     $query = 'INSERT INTO users
                (username, email, password) 
               VALUES
@@ -60,8 +60,10 @@ function create_user_account($username, $email, $password) {
 }
 
 function check_user_login($userName, $passWord) {
+    global $db;
     $query = 'SELECT * FROM users
             WHERE username = :username AND password = :password';
+
     try {
         $statement = $db->prepare($query);
         $statement->bindValue(':username', $userName);
@@ -69,7 +71,7 @@ function check_user_login($userName, $passWord) {
         $statement->execute();
         $result = $statement->fetch();
         $statement->closeCursor();
-        $_SESSION['userID'] = $result['userID'];
+
         return $result;
     } catch (PDOException $ex) {
         $message = 'Login Database Error';

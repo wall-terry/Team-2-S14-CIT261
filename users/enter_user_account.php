@@ -5,7 +5,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+require_once '../model/database.php';
 require_once '../utilities/main.php';
-
 
 include '../views/createAccountView.php';

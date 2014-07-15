@@ -6,11 +6,8 @@
  * and open the template in the editor.
  */
 
+require_once '../model/database.php';
 require_once '../utilities/main.php';
-
-
-$_SESSION = array();
-session_destroy();
 
 $name = session_name();
 $expire = strtotime('-1 year');
@@ -20,5 +17,10 @@ $domain = $params['domain'];
 $secure = $params['secure'];
 $httponly = $params['httponly'];
 setcookie($name, '', $expire, $path, $domain, $secure, $httponly);
-include '../views/pageviews.php';
+
+session_destroy();
+$_SESSION = array();
+
+
+include (filter_input(INPUT_SERVER,'DOCUMENT_ROOT').'/views/pageviews.php');
 
